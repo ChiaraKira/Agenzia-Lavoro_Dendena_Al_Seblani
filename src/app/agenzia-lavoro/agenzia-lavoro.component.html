@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Ticket</h2>
+            <button (click)="prendiTicket()">Prendi Ticket</button>
+            <div class="box">
+                <h3>{{lastTicket}}</h3>
+            </div>
+        </div>
+        <div class="col">
+            <h2>Coda</h2>
+            <button (click)="mostraTicket()">Mostra Ticket</button>
+                 <div class="box">
+                <h3>{{primoTicket}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row full">
+        <div class="col">
+            <h2>Tabellone</h2>
+            <ul>
+                <li *ngFor="let t of tabellone" [ngClass]="{'green': leggiInt(t) % 2 == 0, 'red': leggiInt(t) % 2 != 0}">
+                    {{t}}
+            </li>
+            </ul>
+        </div>
+    </div>
+</div>
